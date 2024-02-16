@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(245, 106, 106);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.ball{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+}
+
+.ball2{
+    
+    background: radial-gradient(ellipse at top left, #f0b105 50%, #2bff00 80%, rgb(172, 3, 3));
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 1;
+    transform-style: preserve-3d;
+    animation: hareket3 2s linear infinite forwards ;
+}
+
+@keyframes hareket3 {
+    
+    
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+   
+}
+
+
+.ball1 {
+    background: radial-gradient(ellipse at top right, #000000 50%, rgb(243, 199, 5));
+    
+    
+    animation: hareket1 2s linear infinite alternate both;
+}
+
+@keyframes hareket1 {
+    0%{
+       transform: translateX(0); 
+    }
+    50%{
+        transform: translateX(-250px) scale(2);
+    }
+    100%{
+        transform: translateX(0);
+    }
+   
+}
+
+.ball3{
+    background: radial-gradient(ellipse at top left, #f30505 50%, #f5e505 80%);
+    position: absolute;
+    animation: hareket2 2s linear infinite alternate both;
+}
+
+@keyframes hareket2 {
+    0%{
+       transform: translateX(0); 
+    }
+    50%{
+        transform: translateX(250px) scale(2);
+        
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
